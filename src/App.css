@@ -4,7 +4,6 @@
     @apply flex flex-row justify-between;
   }
 }
-
 @media (min-width: 650px) {
   .responsive-box {
     @apply w-[80%]  mx-auto;
@@ -15,6 +14,11 @@
 @media (min-width: 420px) {
   .footertext {
     @apply text-nowrap;
+  }
+}
+@media (min-width: 750px) {
+  .responsive-footer {
+    @apply flex flex-row justify-between w-[80%] mx-auto;
   }
 }
 @media (min-width: 850px) {
