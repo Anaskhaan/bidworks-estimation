@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 import Headertopbar from "../components/Headertopbar";
+import Footerbottombar from "../components/Footerbottombar";
 
 function Layout() {
   return (
@@ -11,6 +12,7 @@ function Layout() {
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
+      <Footerbottombar></Footerbottombar>
     </div>
   );
 }

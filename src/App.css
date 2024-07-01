@@ -10,3 +10,15 @@
     @apply w-[80%]  mx-auto;
   }
 }
+
+/* Footer */
+@media (min-width: 420px) {
+  .footertext {
+    @apply text-nowrap;
+  }
+}
+@media (min-width: 850px) {
+  .responsive-footerbottombar {
+    @apply flex flex-row justify-between w-[80%] mx-auto;
+  }
+}
