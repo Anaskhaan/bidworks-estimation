@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
   text-align: center;
 }
@@ -34,5 +35,33 @@
   }
   to {
     transform: rotate(360deg);
+=======
+/* Header */
+@media (min-width: 540px) {
+  .responsive-flexbox {
+    @apply flex flex-row justify-between;
+  }
+}
+@media (min-width: 650px) {
+  .responsive-box {
+    @apply w-[80%]  mx-auto;
+  }
+}
+
+/* Footer */
+@media (min-width: 420px) {
+  .footertext {
+    @apply text-nowrap;
+  }
+}
+@media (min-width: 750px) {
+  .responsive-footer {
+    @apply flex flex-row justify-between w-[80%] mx-auto;
+  }
+}
+@media (min-width: 850px) {
+  .responsive-footerbottombar {
+    @apply flex flex-row justify-between w-[80%] mx-auto;
+>>>>>>> b5b567ebcea4f3d577a483a6c601d3dbcc03ce3c
   }
 }
