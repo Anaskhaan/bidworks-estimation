@@ -6,8 +6,8 @@ function Header() {
       <div className="mx-[10px] py-[20px] flex items-center justify-between responsive-box ">
         <img src="" alt="website logo" />
         <div className="flex items-center gap-2">
-          <h6 className="hover:scale-[1.25] cursor-pointer">Home</h6>
-          <h6 className="hover:scale-[1.25] cursor-pointer">Example</h6>
+          <h6 className="hover:opacity-70 cursor-pointer">Home</h6>
+          <h6 className="hover:opacity-70 cursor-pointer">Example</h6>
         </div>
       </div>
     </div>
