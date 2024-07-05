@@ -8,9 +8,14 @@ import Footerbottombar from "../components/Footer/Footerbottombar";
 function Layout() {
   return (
     <div>
-      <Headertopbar></Headertopbar>
-      <Header></Header>
-      <Outlet></Outlet>
+      <div className="md:fixed md:left-0 md:right-0">
+        <Headertopbar></Headertopbar>
+        <Header></Header>
+      </div>
+      <div className="md:pt-[100px]">
+        <Outlet></Outlet>
+      </div>
+
       <Footer></Footer>
       <Footerbottombar></Footerbottombar>
     </div>
