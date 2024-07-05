@@ -26,3 +26,15 @@
     @apply flex flex-row justify-between w-[80%] mx-auto;
   }
 }
+
+.button-hover-arrow::after {
+  content: "\279E"; /* Unicode for the right arrow (U+279E) */
+  display: inline-block;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.button-hover-arrow:hover::after {
+  opacity: 1;
+}
