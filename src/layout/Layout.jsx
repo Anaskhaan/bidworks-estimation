@@ -12,7 +12,7 @@ function Layout() {
         <Headertopbar></Headertopbar>
         <Header></Header>
       </div>
-      <div className="md:pt-[100px]">
+      <div className="md:pt-[94px]">
         <Outlet></Outlet>
       </div>
 
