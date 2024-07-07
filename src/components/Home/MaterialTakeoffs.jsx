@@ -2,51 +2,47 @@ import React from "react";
 
 const MaterialTakeoffs = () => {
   return (
-    <div className="p-8 max-w-7xl mx-auto text-center">
-      <div className="pr-20 pt-5">
-        <h1 className="text-5xl font-bold mb-4 p-2.5 pr-8">
-          Material Takeoffs
-        </h1>
-      </div>
-      <div className="pr-20">
-        <h1 className="text-5xl font-bold mb-4 p-2.5 ">& Cost Estimations</h1>
+    <div className="p-8 max-w-[80%] mx-auto text-center">
+      <div className="py-8 text-[30px] font-semibold py">
+        Material Takeoffs & Cost Estimations
       </div>
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="bg-white shadow-lg rounded-lg p-6">
+        <div className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] rounded-lg p-6 cursor-pointer">
           <div className="flex justify-center items-center h-16 mb-4">
-            <span className="inline-block text-4xl text-purple-600">
-              <i className="fas fa-ruler-combined"></i>
-            </span>
+            <img
+              className="h-[80px] w-[80px]"
+              src="assets/material/accuracy.svg"
+            />
           </div>
           <h3 className="text-xl font-bold mb-2">Accuracy</h3>
           <p>Line item by line item detailed takeoffs</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg p-6">
+        <div className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] cursor-pointer rounded-lg p-6">
           <div className="flex justify-center items-center h-16 mb-4">
-            <span className="inline-block text-4xl text-red-600">
-              <i className="fas fa-file-alt"></i>
-            </span>
+            <img
+              className="h-[80px] w-[80px] mt-3"
+              src="assets/material/profit.svg"
+            />
           </div>
           <h3 className="text-xl font-bold mb-2">Estimating Services</h3>
           <p>Win more bids with our estimating service</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg p-6">
+        <div className="bg-white  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] cursor-pointer rounded-lg p-6">
           <div className="flex justify-center items-center h-16 mb-4">
-            <span className="inline-block text-4xl text-yellow-600">
-              <i className="fas fa-clock"></i>
-            </span>
+            <img className="h-[60px] w-[60px]" src="assets/material/time.svg" />
           </div>
           <h3 className="text-xl font-bold mb-2">Fast Turn Around Times</h3>
           <p>We understand the importance of due dates</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg p-6">
+        <div className="bg-white  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] cursor-pointer rounded-lg p-6">
           <div className="flex justify-center items-center h-16 mb-4">
-            <span className="inline-block text-4xl text-green-600">
-              <i className="fas fa-thumbs-up"></i>
-            </span>
+            <img
+              className="h-[60px] w-[60px]"
+              src="assets/material/experience.svg"
+            />
           </div>
           <h3 className="text-xl font-bold mb-2">Experience</h3>
           <p>We have over 40 years of collective construction experience</p>
