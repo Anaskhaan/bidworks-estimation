@@ -7,7 +7,7 @@ const WhyHireUs = () => {
         display: "flex",
         justifyContent: "space-between",
         padding: "20px",
-        maxWidth: "1000px",
+        maxWidth: "80%",
         margin: "0 auto",
         fontFamily: "Arial, sans-serif",
         lineHeight: "1.6",

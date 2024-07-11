@@ -25,21 +25,23 @@ const testimonials = [
 
 const TestimonialGrid = () => {
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
-      {testimonials.map((testimonial, index) => (
-        <div
-          className="bg-white border rounded-lg p-6 text-center shadow-md"
-          key={index}
-        >
-          <img
-            src={testimonial.image}
-            alt={`Testimonial from ${testimonial.name}`}
-            className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-          />
-          <p className="italic mb-4">"{testimonial.text}"</p>
-          <p className="font-bold">- {testimonial.name}</p>
-        </div>
-      ))}
+    <div className="flex justify-center">
+      <div className="max-w-[80%] grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
+        {testimonials.map((testimonial, index) => (
+          <div
+            className="bg-white border rounded-lg p-6 text-center shadow-md"
+            key={index}
+          >
+            <img
+              src={testimonial.image}
+              alt={`Testimonial from ${testimonial.name}`}
+              className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+            />
+            <p className="italic mb-4">"{testimonial.text}"</p>
+            <p className="font-bold">- {testimonial.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

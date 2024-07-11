@@ -2,7 +2,7 @@ import React from "react";
 
 const ConstructionEstimatingServices = () => {
   return (
-    <div className="px-4 py-8 max-w-3xl mx-auto font-sans leading-relaxed sm:px-6 lg:px-8">
+    <div className="px-4 py-8 max-w-[80%] mx-auto font-sans leading-relaxed sm:px-6 lg:px-8">
       <h1 className="text-center font-bold text-2xl mb-2">
         Construction Estimating Services
       </h1>

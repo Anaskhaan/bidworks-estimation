@@ -37,7 +37,7 @@ function Getquote() {
     }
   };
   return (
-    <div className=" max-w-[1200px] flex flex-col justify-center md:flex-row md:justify-normal ">
+    <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal ">
       <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
         <img src="" alt="website logo" />
         <h6>Bidding Process, Simplified</h6>
