@@ -1,7 +1,7 @@
 import React from "react";
 
-function Samples() {
+function Example() {
   return <div></div>;
 }
 
-export default Samples;
+export default Example;
