@@ -1,22 +1,40 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Getquote() {
   const form = useRef();
+  const [emailError, setEmailError] = useState(true);
+  const [submitted, setsubmitted] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
-    emailjs
-      .sendForm("service_an8s0ui", "template_qnm4wge", form.current, {
-        publicKey: "8Vap-riHXffJuUl0Y",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    const email = form.current.user_email.value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      setEmailError(false);
+      return;
+    } else {
+      setEmailError(true);
+      emailjs
+        .sendForm(
+          `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
+          `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
+          form.current,
+          {
+            publicKey: `${process.env.REACT_APP_YOUR_PUBLIC_KEY}`,
+          }
+        )
+        .then(
+          () => {
+            setsubmitted(false);
+            setTimeout(() => {
+              setsubmitted(true);
+            }, 10000);
+          },
+          (error) => {
+            setsubmitted(true);
+          }
+        );
+    }
   };
   return (
     <div className=" max-w-[1200px] flex flex-col justify-center md:flex-row md:justify-normal ">
@@ -40,8 +58,17 @@ function Getquote() {
               required
               placeholder="Email"
               name="user_email"
-              className="focus-within:!border-blue-600 h-[36px] pl-[10px] mb-[10px] w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px]"
+              className={`focus-within:!border-blue-600  h-[36px] pl-[10px]  w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px] ${
+                emailError ? "mb-[10px]" : "!border-red-500"
+              }`}
             ></input>
+            <label
+              className={`text-[10px] text-red-500 ${
+                emailError ? "hidden" : ""
+              }`}
+            >
+              Enter Valid email
+            </label>
             <textarea
               required
               name="message"
@@ -50,7 +77,7 @@ function Getquote() {
             ></textarea>
             <input
               type="submit"
-              value="Send"
+              value={`${submitted ? "Send" : "Information Submitted!"}`}
               className="bg-blue-800 mb-[40px] hover:bg-blue-900 text-white rounded-md cursor-pointer w-full h-[36px]"
             ></input>
           </form>
