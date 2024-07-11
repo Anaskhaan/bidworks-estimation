@@ -22,7 +22,7 @@ const HeroSection = () => {
           </strong>
         </p>
         <button
-          className="tracking-widest px-6 py-3  text-white font-semibold  shadow-md transition duration-300 ease hover:tracking-wide"
+          className="text-white py-3 px-6 font-semibold transition duration-300 ease-in-out hover:tracking-wide shadow-md button-hover-arrow"
           style={{
             backgroundImage: "linear-gradient(90deg, #000000 0%, #494b68 100%)",
             backgroundColor: "#265077", // Fallback color

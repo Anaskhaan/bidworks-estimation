@@ -3,7 +3,7 @@ import React from "react";
 
 const NeedMoreJobs = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center p-8 max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-center p-8 max-w-[80%] mx-auto">
       <div className="w-full md:w-1/2 p-4">
         {/* <img
           src={jobImage}
