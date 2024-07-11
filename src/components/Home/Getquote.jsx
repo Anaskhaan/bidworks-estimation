@@ -39,7 +39,14 @@ function Getquote() {
   return (
     <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal ">
       <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
-        <img src="" alt="website logo" />
+        <img
+          src="assets/LogoTransparent.svg"
+          alt="website logo"
+          style={{
+            width: "400px",
+            height: "400px",
+          }}
+        />
         <h6>Bidding Process, Simplified</h6>
       </div>
       <div className=" md:w-[40%] md:mx-[30px] mx-4 my-[70px]">

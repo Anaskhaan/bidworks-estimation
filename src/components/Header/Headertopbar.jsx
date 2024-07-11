@@ -6,7 +6,7 @@ function Headertopbar() {
       <div className="mx-[10px] flex flex-col items-center responsive-box responsive-flexbox">
         <h6 className="flex py-[5px]  items-center gap-2">
           <img className="w-[18px] h-[18px] " src="assets/email.svg" />
-          {/* INFO@ROCKETTAKEOFFS.COM */}
+          INFO@BIDWORKSESTIMATING.COM
         </h6>
         <div className="flex gap-2 items-center">
           <h6 className="flex items-center py-[5px] text-[14px] gap-1 text-nowrap">
