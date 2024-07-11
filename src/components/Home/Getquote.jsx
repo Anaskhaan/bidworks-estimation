@@ -6,14 +6,9 @@ function Getquote() {
   const handleSubmit = (event) => {
     event.preventDefault();
     emailjs
-      .sendForm(
-        `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
-        `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
-        form.current,
-        {
-          publicKey: `${process.env.REACT_APP_YOUR_PUBLIC_KEY}`,
-        }
-      )
+      .sendForm("service_an8s0ui", "template_qnm4wge", form.current, {
+        publicKey: "8Vap-riHXffJuUl0Y",
+      })
       .then(
         () => {
           console.log("SUCCESS!");
