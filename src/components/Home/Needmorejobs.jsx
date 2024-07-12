@@ -12,12 +12,14 @@ const NeedMoreJobs = () => {
         />
       </div>
       <div className="md:w-[50%] bg-[#265077] text-white min-h-[450px] flex flex-col justify-center px-[30px]">
-        <h2 className="text-3xl font-bold mb-4">Need More Job Approvals?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Require Additional Job Approvals?
+        </h2>
         <p className="mb-4 text-[#fffafa]">
-          The more bids you submit the more opportunities you will have for new
-          job approvals. We provide professional and fast construction takeoff
-          services. Many of our customers are happy to see that we have helped
-          them win more bids. We look forward to being part of your team!
+          The more you bid, the higher chances of getting new project approvals.
+          Our clients have been able to win more bids with our help because we
+          provide accurate and efficient construction takeoff services. We hope
+          to be an invaluable new addition on your team!
         </p>
       </div>
     </div>
