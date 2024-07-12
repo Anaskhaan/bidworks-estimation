@@ -4,7 +4,8 @@ const ConstructionInfo = () => {
   return (
     <div className="px-4 py-8 max-w-[80%] mx-auto font-sans leading-relaxed sm:px-6 lg:px-8">
       <h2 className="text-center font-bold text-2xl mb-8">
-        Detailed And Reliable Tentative Construction Costs And Material List
+        Provision of Detailed and Realistic Preliminary Construction Costs and
+        Material List
       </h2>
       <div className="space-y-6">
         <p className="text-left text-lg">

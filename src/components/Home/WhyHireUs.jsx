@@ -61,7 +61,7 @@ const WhyHireUs = () => {
         }}
       >
         <img
-          src="WhyHireUs.png"
+          src="assets/whyNeedUs.svg"
           alt="Why Hire Us"
           style={{ maxWidth: "100%", height: "auto" }}
         />
