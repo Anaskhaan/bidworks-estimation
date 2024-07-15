@@ -14,8 +14,9 @@ function Home() {
       <HeroSection></HeroSection>
       <MaterialTakeoffs></MaterialTakeoffs>
       <NeedMoreJobs></NeedMoreJobs>
-      <ConstructionInfo></ConstructionInfo>
       <WhyHireUs></WhyHireUs>
+      <ConstructionInfo></ConstructionInfo>
+
       <InfoSection></InfoSection>
       <TestimonialGrid></TestimonialGrid>
       <Getquote></Getquote>
