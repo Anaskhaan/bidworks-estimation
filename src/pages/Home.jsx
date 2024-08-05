@@ -12,10 +12,10 @@ function Home() {
   return (
     <div className=" mx-auto">
       <HeroSection></HeroSection>
-      <MaterialTakeoffs></MaterialTakeoffs>
+      <MaterialTakeoffs className="my-[40px]"></MaterialTakeoffs>
       <NeedMoreJobs></NeedMoreJobs>
+      <WhyHireUs className="my-[40px]"></WhyHireUs>
       <ConstructionInfo></ConstructionInfo>
-      <WhyHireUs></WhyHireUs>
       <InfoSection></InfoSection>
       <TestimonialGrid></TestimonialGrid>
       <Getquote></Getquote>

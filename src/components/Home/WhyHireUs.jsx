@@ -3,6 +3,7 @@ import React from "react";
 const WhyHireUs = () => {
   return (
     <div
+      className="gap-6"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -13,8 +14,8 @@ const WhyHireUs = () => {
         lineHeight: "1.6",
       }}
     >
-      <div style={{ flex: "1", paddingRight: "20px" }}>
-        <h2 style={{ fontWeight: "bold" }}>Why Hire Us?</h2>
+      <div className="w-[50%]">
+        <h2 className="text-3xl font-bold text-[#022140]">Why Hire Us?</h2>
         <p style={{ textAlign: "justify" }}>
           Hire us to do your tedious takeoff work. You will have more time and
           save more money when you use our services. Focus on what’s really
@@ -52,18 +53,13 @@ const WhyHireUs = () => {
           </li>
         </ul>
       </div>
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+
+      <div className="w-[50%] flex justify-center items-center">
         <img
-          src="assets/whyNeedUs.svg"
+          src="assets/hire.webp"
           alt="Why Hire Us"
           style={{ maxWidth: "100%", height: "auto" }}
+          className=" min-h-[300px] object-cover rounded-2xl"
         />
       </div>
     </div>
