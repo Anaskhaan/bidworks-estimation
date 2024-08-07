@@ -40,16 +40,8 @@ const WhyHireUs = () => {
             Never Charge For Quotes
           </li>
           <li style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ color: "green", marginRight: "10px" }}>✔️</span>Track
-            Your Order with our Client Login Dashboard
-          </li>
-          <li style={{ display: "flex", alignItems: "center" }}>
             <span style={{ color: "green", marginRight: "10px" }}>✔️</span>We
             Are Built On Transparency
-          </li>
-          <li style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ color: "green", marginRight: "10px" }}>✔️</span>
-            Hablamos Español
           </li>
         </ul>
       </div>

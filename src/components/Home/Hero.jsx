@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-screen "
+      className="relative bg-cover bg-center h-screen mt-8"
       style={{
         backgroundImage: "url('assets/hero.svg')",
       }}
