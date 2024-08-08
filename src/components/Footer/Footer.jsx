@@ -6,7 +6,11 @@ function Footer() {
       <div className="mx-[10px] w-auto py-[20px] flex flex-col items-center responsive-footer">
         {/* first col */}
         <div className="mt-[20px]">
-          <img className="" src="" alt="website logo" />
+          <img
+            className="w-32"
+            src="assets/logowithbackground.png"
+            alt="website logo"
+          />
         </div>
         {/* second col */}
         <div className="flex flex-col gap-2 mt-[20px]">
@@ -24,25 +28,10 @@ function Footer() {
               Takeoff Examples
             </li>
             <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Monthly Membership
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Client Log In Dashboard
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Hablamos Español
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Takeoff Examples
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
               About Us
             </li>
             <li className="mb-[5px] cursor-pointer hover:opacity-80">
               Reviews
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Gift Card
             </li>
             <li className="mb-[5px] cursor-pointer hover:opacity-80">
               Contact Us
@@ -56,9 +45,6 @@ function Footer() {
           </h6>
           <ul className="ml-[5px] text-[14px]">
             <li className="mb-[5px] cursor-pointer hover:opacity-80">Blogs</li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Construction Building Calculators
-            </li>
           </ul>
           <div className="mt-[40px]">
             <h6 className="font-semibold text-[18px] cursor-pointer">
