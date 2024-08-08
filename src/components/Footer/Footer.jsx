@@ -8,7 +8,7 @@ function Footer() {
         <div className="mt-[20px]">
           <img
             className="w-32"
-            src="assets/logowithbackground.png"
+            src="assets/LogoWithText.png"
             alt="website logo"
           />
         </div>
@@ -27,9 +27,7 @@ function Footer() {
             <li className="mb-[5px] cursor-pointer hover:opacity-80">
               Takeoff Examples
             </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              About Us
-            </li>
+            <li className="mb-[5px] cursor-pointer hover:opacity-80">Blogs</li>
             <li className="mb-[5px] cursor-pointer hover:opacity-80">
               Reviews
             </li>
@@ -40,13 +38,7 @@ function Footer() {
         </div>
         {/* third col */}
         <div className="mt-[20px]">
-          <h6 className="font-semibold text-[18px] cursor-pointer">
-            Resources
-          </h6>
-          <ul className="ml-[5px] text-[14px]">
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">Blogs</li>
-          </ul>
-          <div className="mt-[40px]">
+          <div className="mt-[20px]">
             <h6 className="font-semibold text-[18px] cursor-pointer">
               Newsletter & Discounts
             </h6>
@@ -57,6 +49,11 @@ function Footer() {
             <h6 className="font-semibold text-[18px] cursor-pointer">
               Stay Connected
             </h6>
+            <h6 className="font-bold pt-4">Address</h6>
+            <ul>
+              <li>7443 FOXLEIGH WAY </li>
+              <li>ALEXANDRIA, VA 22315</li>
+            </ul>
           </div>
         </div>
       </div>

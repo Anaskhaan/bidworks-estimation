@@ -40,11 +40,11 @@ function Getquote() {
     <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal ">
       <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
         <img
-          src="assets/logowithwhitebg.png"
+          src="assets/LoGO.png"
           alt="website logo"
           style={{
             width: "400px",
-            height: "250px",
+            height: "400px",
           }}
         />
       </div>

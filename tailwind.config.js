@@ -10,6 +10,9 @@ module.exports = {
         90: "90",
         100: "100",
       },
+      color: {
+        customBlue: "#265077",
+      },
     },
   },
   plugins: [],
