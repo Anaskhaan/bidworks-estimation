@@ -37,14 +37,14 @@ function Getquote() {
     }
   };
   return (
-    <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal ">
+    <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal pl-28">
       <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
         <img
-          src="assets/logowithwhitebg.png"
+          src="assets/logowithwhitebg.svg"
           alt="website logo"
           style={{
-            width: "400px",
-            height: "250px",
+            width: "700px",
+            height: "500px",
           }}
         />
       </div>

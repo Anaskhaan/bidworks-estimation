@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,11 +7,7 @@ function Footer() {
       <div className="mx-[10px] w-auto py-[20px] flex flex-col items-center responsive-footer">
         {/* first col */}
         <div className="mt-[20px]">
-          <img
-            className="w-32"
-            src="assets/LogoWithText.png"
-            alt="website logo"
-          />
+          <img className="w-64" src="assets/asset5.svg" alt="website logo" />
         </div>
         {/* second col */}
         <div className="flex flex-col gap-2 mt-[20px]">
@@ -37,6 +34,21 @@ function Footer() {
           </ul>
         </div>
         {/* third col */}
+        <div className="flex flex-col gap-2 mt-[20px]">
+          <h6 className="font-semibold text-[18px]">Resources</h6>
+          <ul>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/faqs">FAQs</Link>
+            </li>
+            <li>
+              <Link to="portfolio">Portfolio</Link>
+            </li>
+          </ul>
+        </div>
+        {/* fourth col */}
         <div className="mt-[20px]">
           <div className="mt-[20px]">
             <h6 className="font-semibold text-[18px] cursor-pointer">

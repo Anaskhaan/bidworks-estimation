@@ -1,96 +1,147 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 
-function Getquote() {
-  const form = useRef();
-  const [emailError, setEmailError] = useState(true);
-  const [submitted, setsubmitted] = useState(true);
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const email = form.current.user_email.value;
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-      setEmailError(false);
-      return;
-    } else {
-      setEmailError(true);
-      emailjs
-        .sendForm(
-          `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
-          `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
-          form.current,
-          {
-            publicKey: `${process.env.REACT_APP_YOUR_PUBLIC_KEY}`,
-          }
-        )
-        .then(
-          () => {
-            setsubmitted(false);
-            setTimeout(() => {
-              setsubmitted(true);
-            }, 10000);
-          },
-          (error) => {
-            setsubmitted(true);
-          }
-        );
-    }
+const ContactForm = () => {
+  const [files, setFiles] = useState([]);
+  const [dragActive, setDragActive] = useState(false);
+  const inputRef = useRef(null);
+
+  const handleFileChange = (e) => {
+    const selectedFiles = Array.from(e.target.files);
+    setFiles(selectedFiles);
   };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(true);
+  };
+
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    const droppedFiles = Array.from(e.dataTransfer.files);
+    setFiles(droppedFiles);
+  };
+
+  const handleClick = () => {
+    inputRef.current.click();
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal ">
-      <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
-        <img
-          src="assets/LoGO.png"
-          alt="website logo"
-          style={{
-            width: "400px",
-            height: "400px",
-          }}
-        />
-      </div>
-      <div className=" md:w-[40%] md:mx-[30px] mx-4 my-[70px]">
-        <div className="pt-[40px] px-[20px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg bg-white ">
-          <h6 className="text-center text-[24px] mb-[10px] font-semibold">
-            Get Quote
-          </h6>
-          <form ref={form} onSubmit={handleSubmit}>
-            <input
-              required
-              placeholder="Name"
-              name="user_name"
-              className="focus-within:!border-blue-600 h-[36px] pl-[10px] mb-[10px] w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px]"
-            ></input>
-            <input
-              required
-              placeholder="Email"
-              name="user_email"
-              className={`focus-within:!border-blue-600  h-[36px] pl-[10px]  w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px] ${
-                emailError ? "mb-[10px]" : "!border-red-500"
-              }`}
-            ></input>
-            <label
-              className={`text-[10px] text-red-500 ${
-                emailError ? "hidden" : ""
-              }`}
-            >
-              Enter Valid email
-            </label>
-            <textarea
-              required
-              name="message"
-              placeholder="Tell us about your needs"
-              className="focus-within:!border-blue-600 h-[100px] pl-[10px] pt-2 mb-[10px] w-full border border-gray-300 rounded-md outline-none resize-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px]"
-            ></textarea>
-            <input
-              type="submit"
-              value={`${submitted ? "Send" : "Information Submitted!"}`}
-              className="bg-blue-800 mb-[40px] hover:bg-blue-900 text-white rounded-md cursor-pointer w-full h-[36px]"
-            ></input>
-          </form>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 pt-5">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-screen-lg md:w-4/5 lg:w-3/5 bg-white p-6 md:p-8 rounded-lg shadow-md"
+      >
+        <p className="mb-4 text-center text-gray-600">
+          Please either email your plans at{" "}
+          <a
+            href="mailto:info@bidworksestimating.com"
+            className="text-blue-500 underline"
+          >
+            info@bidworksestimating.com
+          </a>{" "}
+          or use this page to send them to us.
+        </p>
+
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="First Name*"
+            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          />
         </div>
-      </div>
+
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Last Name*"
+            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          />
+        </div>
+
+        <div className="mb-4">
+          <input
+            type="email"
+            placeholder="Email Address*"
+            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          />
+        </div>
+
+        <div className="mb-4">
+          <input
+            type="tel"
+            placeholder="Phone Number*"
+            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          />
+        </div>
+
+        <div
+          className={`mb-4 p-4 border-2 border-dashed rounded-lg text-center cursor-pointer ${
+            dragActive ? "border-blue-500 bg-blue-50" : "border-gray-300"
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onClick={handleClick}
+        >
+          <input
+            type="file"
+            multiple
+            onChange={handleFileChange}
+            className="hidden"
+            accept="image/*,.pdf"
+            ref={inputRef}
+          />
+          {files.length > 0 ? (
+            <span>{files.length} file(s) selected</span>
+          ) : (
+            <span>
+              {dragActive
+                ? "Release to upload your files"
+                : "Click or Drag files to this area to upload. You can upload up to 5 files."}
+            </span>
+          )}
+        </div>
+
+        <div className="mb-4">
+          <textarea
+            placeholder="Message*"
+            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          ></textarea>
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            SEND
+          </button>
+        </div>
+      </form>
     </div>
   );
-}
+};
 
-export default Getquote;
+export default ContactForm;
