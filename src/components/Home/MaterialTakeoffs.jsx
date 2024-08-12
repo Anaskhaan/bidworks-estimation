@@ -12,10 +12,11 @@ const MaterialTakeoffs = () => {
             <img
               className="h-[80px] w-[80px]"
               src="assets/material/accuracy.svg"
+              alt="svg"
             />
           </div>
           <h3 className="text-xl font-bold mb-2">Accuracy</h3>
-          <p>Line item by line item detailed takeoffs</p>
+          <p>Line item detailed takeoffs</p>
         </div>
 
         <div className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] cursor-pointer rounded-lg p-6">
@@ -23,6 +24,7 @@ const MaterialTakeoffs = () => {
             <img
               className="h-[80px] w-[80px] mt-3"
               src="assets/material/profit.svg"
+              alt="svg"
             />
           </div>
           <h3 className="text-xl font-bold mb-2">Estimating Services</h3>
@@ -31,7 +33,11 @@ const MaterialTakeoffs = () => {
 
         <div className="bg-white  shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] cursor-pointer rounded-lg p-6">
           <div className="flex justify-center items-center h-16 mb-4">
-            <img className="h-[60px] w-[60px]" src="assets/material/time.svg" />
+            <img
+              className="h-[60px] w-[60px]"
+              src="assets/material/time.svg"
+              alt="svg"
+            />
           </div>
           <h3 className="text-xl font-bold mb-2">Fast Turn Around Times</h3>
           <p>We understand the importance of due dates</p>
@@ -42,6 +48,7 @@ const MaterialTakeoffs = () => {
             <img
               className="h-[60px] w-[60px]"
               src="assets/material/experience.svg"
+              alt="svg"
             />
           </div>
           <h3 className="text-xl font-bold mb-2">Experience</h3>

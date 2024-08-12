@@ -1,20 +1,51 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Header() {
+  const location = useLocation();
+
+  // Determine active path
+  const isActive = (path) => location.pathname === path;
   return (
     <div className="bg-[#022140] text-white items-center z-10">
       <div className="mx-[10px] py-[20px] flex items-center justify-between responsive-box ">
         <img
           src="assets/logowithbackground.png"
           alt="website logo"
-          style={{ width: "80px", height: "80px" }}
+          style={{ width: "50px", height: "50px" }}
         />
         <div className="flex items-center gap-2">
-          <Link to={""}>
-            <h6 className="hover:opacity-70 cursor-pointer">Home</h6>
+          <Link to="/">
+            <button
+              className={`bg-customBlue text-white font-bold py-2 px-4 border-b-4 rounded ${
+                isActive("/")
+                  ? "border-customBlue bg-customBlue"
+                  : "border-blue-700 hover:border-blue-500 hover:bg-blue-400"
+              }`}
+            >
+              HOME
+            </button>
           </Link>
-          <Link to={"example"}>
-            <h6 className="hover:opacity-70 cursor-pointer">Example</h6>
+          <Link to="/example">
+            <button
+              className={`bg-customBlue text-white font-bold py-2 px-4 border-b-4 rounded ${
+                isActive("/example")
+                  ? "border-customBlue bg-customBlue"
+                  : "border-blue-700 hover:border-blue-500 hover:bg-blue-400"
+              }`}
+            >
+              SAMPLES
+            </button>
+          </Link>
+          <Link to="/upload">
+            <button
+              className={`bg-customBlue text-white font-bold py-2 px-4 border-b-4 rounded ${
+                isActive("/upload")
+                  ? "border-customBlue bg-customBlue"
+                  : "border-blue-700 hover:border-blue-500 hover:bg-blue-400"
+              }`}
+            >
+              UPLOAD
+            </button>
           </Link>
         </div>
       </div>
