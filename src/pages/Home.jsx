@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import Getquote from "../components/Home/Getquote";
 import HeroSection from "../components/Home/Hero";
 import InfoSection from "../components/Home/Info";
@@ -9,6 +10,9 @@ import ConstructionInfo from "../components/Home/Detailed";
 import WhyHireUs from "../components/Home/WhyHireUs";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className=" mx-auto">
       <HeroSection></HeroSection>

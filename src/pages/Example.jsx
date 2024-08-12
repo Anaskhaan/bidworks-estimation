@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const samples = [
   {
@@ -45,6 +46,9 @@ const samples = [
 ];
 
 const SamplesSection = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto">

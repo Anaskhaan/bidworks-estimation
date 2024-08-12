@@ -12,6 +12,7 @@ module.exports = {
       },
       color: {
         customBlue: "#265077",
+        blueTwo: "022140",
       },
     },
   },

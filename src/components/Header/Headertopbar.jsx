@@ -4,13 +4,18 @@ function Headertopbar() {
   return (
     <div className="bg-[#265077] text-white text-[14px] z-10">
       <div className="mx-[10px] flex flex-col items-center responsive-box responsive-flexbox">
-        <h6 className="flex py-[5px]  items-center gap-2">
+        <h6 className="flex py-[5px]  items-center gap-2 ">
           <img
             className="w-[18px] h-[18px] "
             src="assets/email.svg"
             alt="mail svg"
           />
-          INFO@BIDWORKSESTIMATING.COM
+          <a
+            href="mailto:info@bidworksestimating.com"
+            className="text-white uppercase "
+          >
+            info@bidworksestimating.com
+          </a>
         </h6>
         <div className="flex gap-2 items-center">
           <h6 className="flex items-center py-[5px] text-[14px] gap-1 text-nowrap">
@@ -19,7 +24,14 @@ function Headertopbar() {
               src="assets/phone.svg"
               alt="phone svg"
             />
-            404-900-9811
+            <a
+              href="https://wa.me/15713844490"
+              className="text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              571-384-4490
+            </a>
           </h6>
           <div className="bg-black cursor-pointer">
             <div className="font-bold flex items-center px-2 ">
