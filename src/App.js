@@ -4,6 +4,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Example from "./pages/Example";
 import TermsAndConditions from "./pages/Terms";
+import Upload from "./pages/Upload.jsx";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Route path="/" Component={Layout}>
           <Route path="" Component={Home} />
           <Route path="example" Component={Example} />
-          <Route path="term" Component={TermsAndConditions} />
+          <Route path="upload" Component={Upload} />
+          <Route path="terms" Component={TermsAndConditions} />
         </Route>
       </Routes>
     </div>

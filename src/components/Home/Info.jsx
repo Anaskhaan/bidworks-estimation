@@ -23,7 +23,11 @@ const ConstructionEstimatingServices = () => {
             currentItem === "Reliabilty" ? "bg-gray-200" : "bg-gray-100"
           }`}
         >
-          <img className="icon-res info-btn-icon" src="assets/reliable.svg" />
+          <img
+            className="icon-res info-btn-icon"
+            src="assets/reliable.svg"
+            alt="svg"
+          />
         </div>
         <div
           onClick={() => {
@@ -33,7 +37,11 @@ const ConstructionEstimatingServices = () => {
             currentItem === "Technology" ? "bg-gray-200" : "bg-gray-100"
           }`}
         >
-          <img className="icon-res info-btn-icon" src="assets/technology.svg" />
+          <img
+            className="icon-res info-btn-icon"
+            src="assets/technology.svg"
+            alt="svg"
+          />
         </div>
         <div
           onClick={() => {
@@ -46,6 +54,7 @@ const ConstructionEstimatingServices = () => {
           <img
             className="icon-res info-btn-icon"
             src="assets/transparency.svg"
+            alt="svg"
           />
         </div>
       </div>
