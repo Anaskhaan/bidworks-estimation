@@ -24,12 +24,7 @@ function Headertopbar() {
               src="assets/phone.svg"
               alt="phone svg"
             />
-            <a
-              href="https://wa.me/15713844490"
-              className="text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="tell:+15713844490" className="text-white">
               571-384-4490
             </a>
           </h6>
