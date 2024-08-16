@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-screen"
+      className="relative bg-cover bg-center h-screen sm:py-12"
       style={{
         backgroundImage: "url('assets/hero.svg')",
         backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with 50% opacity
