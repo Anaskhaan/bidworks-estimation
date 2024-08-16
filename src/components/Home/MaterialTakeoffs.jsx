@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MaterialTakeoffs = () => {
   return (
     <div className="p-8 max-w-[80%] mx-auto text-center">
-      <div className="py-8 text-[30px] font-semibold py">
+      <div className="py-8 text-[30px] text-[#022140] font-semibold py">
         Material Takeoffs & Cost Estimations
       </div>
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,7 +64,9 @@ const MaterialTakeoffs = () => {
             backgroundColor: "#265077", // Fallback color
           }}
         >
-          GET A FREE QUOTE &amp; ENJOY 10% OFF YOUR FIRST ORDER
+          <Link to="/upload">
+            GET A FREE QUOTE &amp; ENJOY 10% OFF YOUR FIRST ORDER
+          </Link>
         </button>
       </div>
     </div>

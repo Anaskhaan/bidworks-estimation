@@ -3,73 +3,65 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="bg-[#022140] text-white items-center">
-      <div className="mx-[10px] w-auto py-[20px] flex flex-col items-center responsive-footer">
-        {/* first col */}
-        <div className="mt-[20px]">
-          <img className="w-64" src="assets/asset5.svg" alt="website logo" />
-        </div>
-        {/* second col */}
-        <div className="flex flex-col gap-2 mt-[20px]">
-          <h6 className="font-semibold text-[18px] cursor-pointer">
-            More Information
-          </h6>
-          <ul className="ml-[5px] text-[14px]">
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Request A Quote
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              FAQ-Frequently Asked Questions
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Takeoff Examples
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">Blogs</li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Reviews
-            </li>
-            <li className="mb-[5px] cursor-pointer hover:opacity-80">
-              Contact Us
-            </li>
-          </ul>
-        </div>
-        {/* third col */}
-        <div className="flex flex-col gap-2 mt-[20px]">
-          <h6 className="font-semibold text-[18px]">Resources</h6>
-          <ul>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/faqs">FAQs</Link>
-            </li>
-            <li>
-              <Link to="portfolio">Portfolio</Link>
-            </li>
-          </ul>
-        </div>
-        {/* fourth col */}
-        <div className="mt-[20px]">
-          <div className="mt-[20px]">
-            <h6 className="font-semibold text-[18px] cursor-pointer">
+    <footer className="bg-[#022140] text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* First Column */}
+          <div className="mb-6 md:mb-0">
+            <img
+              className="w-48 md:w-64"
+              src="assets/asset5.svg"
+              alt="website logo"
+            />
+          </div>
+
+          {/* Second Column */}
+          <div className="flex flex-col gap-4 mb-6 md:mb-0">
+            <h6 className="font-semibold text-lg">More Information</h6>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/upload" className="hover:opacity-80">
+                  Request A Quote
+                </Link>
+              </li>
+              <li>
+                <Link to="/example" className="hover:opacity-80">
+                  Takeoff Examples
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="hover:opacity-80">
+                  Blogs
+                </a>
+              </li>
+            </ul>
+            <h6 className="font-semibold text-lg mt-4">Contact Us</h6>
+            <ul className="text-sm space-y-1">
+              <li>571-384-4490</li>
+              <li>info@bidworksestimating.com</li>
+            </ul>
+          </div>
+
+          {/* Fourth Column */}
+          <div className="flex flex-col items-center md:items-start">
+            <h6 className="font-semibold text-lg mb-2">
               Newsletter & Discounts
             </h6>
             <input
-              className="my-[10px] text-[18px] text-[#686666] py-[10px] px-[10px] rounded-sm w-full bg-white outline-none"
+              className="mb-4 text-lg text-gray-700 py-2 px-3 rounded-sm w-full md:w-64 bg-white outline-none"
+              type="email"
               placeholder="Your Email Address"
-            ></input>
-            <h6 className="font-semibold text-[18px] cursor-pointer">
-              Stay Connected
-            </h6>
-            <h6 className="font-bold pt-4">Address</h6>
-            <ul>
-              <li>7443 FOXLEIGH WAY </li>
+            />
+            <h6 className="font-semibold text-lg mb-2">Stay Connected</h6>
+            <h6 className="font-bold mt-4">Address</h6>
+            <ul className="text-sm text-center md:text-left">
+              <li>7443 FOXLEIGH WAY</li>
               <li>ALEXANDRIA, VA 22315</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

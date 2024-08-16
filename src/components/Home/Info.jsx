@@ -8,12 +8,6 @@ const ConstructionEstimatingServices = () => {
   };
   return (
     <div className="md:px-4 py-8 md:max-w-[80%] mx-auto font-sans leading-relaxed sm:px-6 lg:px-8">
-      {/* <h1 className="text-center font-bold text-2xl mb-2">
-        Construction Estimating Services
-      </h1>
-      <h2 className="text-center font-semibold text-xl mb-8">
-        What you enjoy when you work with us
-      </h2> */}
       <div className="flex gap-2 info-btn-wrapper justify-center items-center px-[5px] overflow-hidden">
         <div
           onClick={() => {

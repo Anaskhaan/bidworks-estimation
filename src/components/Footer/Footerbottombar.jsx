@@ -17,11 +17,11 @@ function Footerbottombar() {
             className="w-[35px] h-[35px] cursor-pointer hover:opacity-70"
             src="assets/facebook.svg"
           /> */}
-          <img
+          {/* <img
             className="w-[35px] h-[35px] cursor-pointer hover:opacity-70"
             src="assets/linkedin.svg"
             alt="linkedIn svg"
-          />
+          /> */}
         </div>
       </div>
     </div>

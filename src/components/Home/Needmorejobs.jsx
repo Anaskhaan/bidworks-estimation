@@ -1,5 +1,4 @@
 import React from "react";
-// import jobImage from "./path/to/your/image.png";
 
 const NeedMoreJobs = () => {
   return (

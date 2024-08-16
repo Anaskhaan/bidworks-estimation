@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Headertopbar() {
   return (
@@ -24,24 +25,30 @@ function Headertopbar() {
               src="assets/phone.svg"
               alt="phone svg"
             />
-            <a href="tell:+15713844490" className="text-white">
+            {/* <a href="15713844490" className="text-white">
               571-384-4490
-            </a>
+            </a> */}
+            {/* <ul>
+              <li></li>
+            </ul> */}
+            <p>571-384-4490</p>
           </h6>
           <div className="bg-black cursor-pointer">
             <div className="font-bold flex items-center px-2 ">
-              <h6 className="text-nowrap">GET QUOTES</h6>
+              <h6 className="text-nowrap">
+                <Link to="/upload">GET QUOTES</Link>
+              </h6>
             </div>
           </div>
           {/* <img
             className="w-[20px] h-[20px] cursor-pointer hover:opacity-70"
             src="assets/facebook.svg"
           /> */}
-          <img
+          {/* <img
             className="w-[20px] h-[20px] cursor-pointer hover:opacity-70"
             src="assets/linkedin.svg"
             alt="linkedIn svg"
-          />
+          /> */}
         </div>
       </div>
     </div>
