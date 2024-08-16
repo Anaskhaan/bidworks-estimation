@@ -37,7 +37,9 @@ function Footer() {
             </ul>
             <h6 className="font-semibold text-lg mt-4">Contact Us</h6>
             <ul className="text-sm space-y-1">
-              <li>571-384-4490</li>
+              <li>
+                <a href="tel:+571-384-4490">571-384-4490</a>
+              </li>
               <li>info@bidworksestimating.com</li>
             </ul>
           </div>

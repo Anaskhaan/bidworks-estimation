@@ -5,7 +5,7 @@ const steps = [
   {
     title: "Send Us Your Plans",
     description:
-      "Upload your plans here or email them to info@bidworksestimating.com—whichever is more convenient for you. Be sure to include details about your project and scope of work.",
+      "Upload your plans here or email them to info@bidworksestimating.com whichever is more convenient for you. Be sure to include details about your project and scope of work.",
   },
   {
     title: "Receive a Quote for Our Services",
@@ -29,7 +29,7 @@ const GettingStartedGrid = () => {
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div
-              className="bg-white border rounded-lg p-6 text-center shadow-lg"
+              className="bg-white border text-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:!shadow-[0px_2px_20px_3px_#265077] rounded-lg p-6 cursor-pointer"
               key={index}
             >
               <h3 className="font-bold text-2xl text-[#022140] mb-2">
@@ -48,7 +48,7 @@ const GettingStartedGrid = () => {
               backgroundColor: "#265077", // Fallback color
             }}
           >
-            <Link to="/upload">UPLOAD</Link>
+            <Link to="/upload">UPLOAD YOUR DRAWING'S HERE!</Link>
           </button>
         </div>
         <div className="mt-12">

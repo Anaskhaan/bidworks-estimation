@@ -7,7 +7,7 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-screen-lg md:w-4/5 lg:w-3/5 bg-white p-6 md:p-8 rounded-lg shadow-md">
         <h1 className="text-2xl md:text-3xl font-bold text-center text-blueTwo mb-6">
           About Us
@@ -121,12 +121,7 @@ const AboutUs = () => {
         <ul className="text-gray-700">
           <li className="mb-2">
             <strong>Phone:</strong>{" "}
-            <a
-              href="https://wa.me/15713844490"
-              className="text-blue-800"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="tel:+15713844490" className="text-blue-800">
               571-384-4490
             </a>
           </li>

@@ -25,13 +25,12 @@ function Headertopbar() {
               src="assets/phone.svg"
               alt="phone svg"
             />
-            {/* <a href="15713844490" className="text-white">
+            <a href="tel:+15713844490" className="text-white">
               571-384-4490
-            </a> */}
+            </a>
             {/* <ul>
               <li></li>
             </ul> */}
-            <p>571-384-4490</p>
           </h6>
           <div className="bg-black cursor-pointer">
             <div className="font-bold flex items-center px-2 ">
