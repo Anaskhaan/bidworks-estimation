@@ -70,7 +70,7 @@ const SamplesSection = () => {
                 <h3 className="text-2xl font-bold mb-2">{sample.title}</h3>
                 <p className="text-gray-700">{sample.description}</p>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0  bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <button className="bg-white text-black font-semibold py-2 px-4 rounded">
                   <a
                     href={sample.pdf}

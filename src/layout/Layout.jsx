@@ -12,7 +12,7 @@ function Layout() {
         <Headertopbar></Headertopbar>
         <Header></Header>
       </div>
-      <div className="md:pt-[94px]">
+      <div className="md:pt-[94px] " style={{ paddingTop: "80px" }}>
         <Outlet></Outlet>
       </div>
 

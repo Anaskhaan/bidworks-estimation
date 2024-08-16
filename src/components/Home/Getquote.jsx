@@ -5,6 +5,7 @@ function Getquote() {
   const form = useRef();
   const [emailError, setEmailError] = useState(true);
   const [submitted, setsubmitted] = useState(true);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = form.current.user_email.value;
@@ -36,58 +37,43 @@ function Getquote() {
         );
     }
   };
+
   return (
-    <div className=" max-w-[80%] flex flex-col justify-center md:flex-row md:justify-normal pl-28">
-      <div className="flex flex-col items-center justify-center gap-[20px]  md:w-[60%] mt-[40px]">
-        <img
-          src="assets/logowithwhitebg.svg"
-          alt="website logo"
-          style={{
-            width: "700px",
-            height: "500px",
-          }}
-        />
-      </div>
-      <div className=" md:w-[40%] md:mx-[30px] mx-4 my-[70px]">
-        <div className="pt-[40px] px-[20px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg bg-white ">
-          <h6 className="text-center text-[24px] mb-[10px] font-semibold">
-            Get Quote
-          </h6>
-          <form ref={form} onSubmit={handleSubmit}>
-            <input
-              required
-              placeholder="Name"
-              name="user_name"
-              className="focus-within:!border-blue-600 h-[36px] pl-[10px] mb-[10px] w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px]"
-            ></input>
-            <input
-              required
-              placeholder="Email"
-              name="user_email"
-              className={`focus-within:!border-blue-600  h-[36px] pl-[10px]  w-full border border-gray-300 rounded-md outline-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px] ${
-                emailError ? "mb-[10px]" : "!border-red-500"
-              }`}
-            ></input>
-            <label
-              className={`text-[10px] text-red-500 ${
-                emailError ? "hidden" : ""
-              }`}
-            >
-              Enter Valid email
-            </label>
-            <textarea
-              required
-              name="message"
-              placeholder="Tell us about your needs"
-              className="focus-within:!border-blue-600 h-[100px] pl-[10px] pt-2 mb-[10px] w-full border border-gray-300 rounded-md outline-none resize-none placeholder:text-gray-300 placeholder:text-[14px] text-[14px]"
-            ></textarea>
-            <input
-              type="submit"
-              value={`${submitted ? "Send" : "Information Submitted!"}`}
-              className="bg-blue-800 mb-[40px] hover:bg-blue-900 text-white rounded-md cursor-pointer w-full h-[36px]"
-            ></input>
-          </form>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+        <h6 className="text-center text-2xl mb-4 font-semibold">Get Quote</h6>
+        <form ref={form} onSubmit={handleSubmit}>
+          <input
+            required
+            placeholder="Name"
+            name="user_name"
+            className="focus:border-blue-600 h-10 pl-3 mb-3 w-full border border-gray-300 rounded-md outline-none placeholder-gray-300 text-sm"
+          />
+          <input
+            required
+            placeholder="Email"
+            name="user_email"
+            className={`focus:border-blue-600 h-10 pl-3 w-full border border-gray-300 rounded-md outline-none placeholder-gray-300 text-sm ${
+              emailError ? "mb-3" : "border-red-500"
+            }`}
+          />
+          <label
+            className={`text-xs text-red-500 ${emailError ? "hidden" : ""}`}
+          >
+            Enter a valid email
+          </label>
+          <textarea
+            required
+            name="message"
+            placeholder="Tell us about your needs"
+            className="focus:border-blue-600 h-24 pl-3 pt-2 mb-3 w-full border border-gray-300 rounded-md outline-none resize-none placeholder-gray-300 text-sm"
+          />
+          <input
+            type="submit"
+            value={submitted ? "Send" : "Information Submitted!"}
+            className="bg-blue-800 hover:bg-blue-900 text-white rounded-md cursor-pointer w-full h-10"
+          />
+        </form>
       </div>
     </div>
   );

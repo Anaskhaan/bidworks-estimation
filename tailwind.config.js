@@ -10,6 +10,9 @@ module.exports = {
         90: "90",
         100: "100",
       },
+      opacity: {
+        96: "0.96",
+      },
       color: {
         customBlue: "#265077",
         blueTwo: "022140",
