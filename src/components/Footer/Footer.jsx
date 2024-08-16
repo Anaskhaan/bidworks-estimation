@@ -30,7 +30,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:opacity-80">
+                <a href="/blogs" className="hover:opacity-80">
                   Blogs
                 </a>
               </li>
