@@ -14,11 +14,7 @@ function Header() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative">
         {/* Logo */}
         <Link to="/">
-          <img
-            src="assets/logo.svg"
-            alt="header logo"
-            className="w-6 ml-16 "
-          ></img>
+          <img src="assets/logo.svg" alt="header logo" className="w-6"></img>
         </Link>
 
         {/* Hamburger Menu Button for Mobile - Only visible on small screens */}
