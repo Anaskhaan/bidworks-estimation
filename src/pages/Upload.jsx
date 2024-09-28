@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
-import { useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { Dropbox } from "dropbox";
 
 const ContactForm = () => {
   const [files, setFiles] = useState([]);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef(null);
+  const [status, setStatus] = useState("");
 
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
@@ -35,13 +36,41 @@ const ContactForm = () => {
     inputRef.current.click();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+    setStatus("Uploading files...");
+
+    if (files.length === 0) {
+      setStatus("No files selected.");
+      return;
+    }
+
+    try {
+      // Initialize Dropbox instance with the access token
+      const dbx = new Dropbox({
+        accessToken: process.env.REACT_APP_DROPBOX_ACCESS_TOKEN, // Replace with your token in the .env file
+      });
+
+      // Upload files to Dropbox
+      const uploadPromises = files.map((file) => {
+        return dbx.filesUpload({
+          path: `/${file.name}`, // Upload to Dropbox root folder
+          contents: file,
+        });
+      });
+
+      await Promise.all(uploadPromises);
+
+      setStatus("Files uploaded successfully!");
+    } catch (error) {
+      setStatus(`Error: ${error.message}`);
+    }
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 pt-5">
       <form
@@ -139,6 +168,8 @@ const ContactForm = () => {
             SEND
           </button>
         </div>
+
+        {status && <p className="text-center mt-4">{status}</p>}
       </form>
     </div>
   );
